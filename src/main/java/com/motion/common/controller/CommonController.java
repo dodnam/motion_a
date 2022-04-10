@@ -1,15 +1,21 @@
 package com.motion.common.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
-@RestController
+@Controller
 public class CommonController {
 
-	  @GetMapping("/")
-	  public String index() {
-	    return "demo project!!";
+	  @RequestMapping("/")
+	  public String home() {	
+	    return "index";
 	  }
+	  
+	  @RequestMapping("/hello")
+	  public String hello() {
+		  return "hello";
+	  }
+	  
 }
 
